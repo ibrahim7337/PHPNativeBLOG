@@ -1,0 +1,31 @@
+-- CREATE TABLE users (
+--     id INT AUTO_INCREMENT PRIMARY KEY,
+--     username VARCHAR(100) NOT NULL,
+--     email VARCHAR(255) UNIQUE NOT NULL,
+--     password VARCHAR(100) NOT NULL,
+--     role ENUM('user', 'admin') DEFAULT 'user',
+--     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+-- );
+
+-- CREATE TABLE categories (
+--     id INT AUTO_INCREMENT PRIMARY KEY,
+--     name VARCHAR(100) UNIQUE NOT NULL,
+--     description TEXT,
+--     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+-- );
+
+-- CREATE TABLE posts (
+--     id INT AUTO_INCREMENT PRIMARY KEY,
+--     user_id INT,
+--     category_id INT NULL,
+--     title VARCHAR(100) NOT NULL,
+--     content TEXT,
+--     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+--     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+--     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+--     FOREIGN KEY (category_id) REFERENCES categories(id) ON DELETE SET NULL ON UPDATE CASCADE
+-- );
+
+-- ALTER TABLE posts DROP COLUMN image;
+
+-- ALTER TABLE posts ADD image VARCHAR(255) NULL AFTER content;
