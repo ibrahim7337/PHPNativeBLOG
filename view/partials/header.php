@@ -3,7 +3,7 @@ require_once __DIR__ . "/../../admin/User.php";
 require_once __DIR__ . "/../../admin/Category.php";
 require_once __DIR__ . "/../../admin/Post.php";
 require_once __DIR__ . "/../../user/UserPost.php";
-require_once __DIR__ . "/../../authorization/home.php";
+require_once __DIR__ . "/../../authorization/Home.php";
 
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
