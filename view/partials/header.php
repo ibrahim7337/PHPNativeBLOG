@@ -41,19 +41,19 @@ if (session_status() === PHP_SESSION_NONE) {
 
 
     <style>
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            user-select: none;
-        }
+    .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+    }
 
-        @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-                font-size: 3.5rem;
-            }
+    @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+            font-size: 3.5rem;
         }
+    }
     </style>
 
 
@@ -78,12 +78,12 @@ if (session_status() === PHP_SESSION_NONE) {
         <div class="navbar-nav">
             <div class="nav-item text-nowrap">
                 <?php if (isset($_SESSION['user'])): ?>
-                    <a class="nav-link px-3" href="<?= ROOT ?>/auth/logout.php">Logout</a>
+                <a class="nav-link px-3" href="<?= ROOT ?>/auth/logout.php">Logout</a>
                 <?php else: ?>
-                    <div class="d-flex">
-                        <a class="nav-link px-3" href="<?= ROOT ?>/view/login.php">Login</a>
-                        <a class="nav-link px-3 ms-2" href="<?= ROOT ?>/view/register.php">Register</a>
-                    </div>
+                <div class="d-flex">
+                    <a class="nav-link px-3" href="<?= ROOT ?>/view/login.php">Login</a>
+                    <a class="nav-link px-3 ms-2" href="<?= ROOT ?>/view/register.php">Register</a>
+                </div>
                 <?php endif; ?>
 
 

@@ -122,7 +122,7 @@ class UserPost
     // Edit method
     public function edit(int $id)
     {
-        // Get user
+        // Get post
         $stmt = $this->db->prepare("SELECT * FROM posts WHERE id = :id LIMIT 1");
         $stmt->execute(['id' => $id]);
         return $stmt->fetch();

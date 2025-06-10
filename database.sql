@@ -6,14 +6,12 @@
 --     role ENUM('user', 'admin') DEFAULT 'user',
 --     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 -- );
-
 -- CREATE TABLE categories (
 --     id INT AUTO_INCREMENT PRIMARY KEY,
 --     name VARCHAR(100) UNIQUE NOT NULL,
 --     description TEXT,
 --     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 -- );
-
 -- CREATE TABLE posts (
 --     id INT AUTO_INCREMENT PRIMARY KEY,
 --     user_id INT,
@@ -25,7 +23,6 @@
 --     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
 --     FOREIGN KEY (category_id) REFERENCES categories(id) ON DELETE SET NULL ON UPDATE CASCADE
 -- );
-
 -- ALTER TABLE posts DROP COLUMN image;
-
 -- ALTER TABLE posts ADD image VARCHAR(255) NULL AFTER content;
+-- ALTER TABLE users ADD token VARCHAR(255) DEFAULT NULL AFTER role;
