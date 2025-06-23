@@ -146,6 +146,17 @@ class Post
                 return;
             }
 
+            // Get user who made post not admin who update it
+            $query = "SELECT users.id
+             FROM posts
+             LEFT JOIN users ON posts.user_id = users.id
+             WHERE posts.id = :id 
+             LIMIT 1";
+            $stmt = $this->db->prepare($query);
+            $stmt->execute(['id' => $id]);
+            $user = $stmt->fetch(PDO::FETCH_ASSOC);
+            $user_id = $user['id'] ?? NULL;
+
             // Default to old image if no new upload
             $existingPost = $this->edit($id);
             $image_name = $existingPost['image'];
